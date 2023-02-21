@@ -61,15 +61,15 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
-         
+
 static const struct arg args[] = {
-        /* function format          argument */
-	{ run_command,		"[󰍹 %s%%] ",	"xbacklight -get | cut -c -2" },
-	{ run_command,		"[󰕾 %s ",	"amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-	{ run_command,		"(%s)] ",	"amixer sget Master | awk -F\"[][]\" '/%/ { print $6 }'" },
-        { cpu_perc,             "[󰻠 %s%%] ",	NULL },
-        { ram_perc,             "[ %s%% ",	NULL },
-	{ ram_used,		"(%sB)] ",	NULL },
-        { battery_perc,         "[  %s%%] ",	"BAT0" },
-        { datetime,             "%s",		"%e.%m.%Y, %I:%M:%S" },
+									/* function format		argument */
+		{ run_command,			"^c#ff9743^ 󰍹 %s%%",		"xbacklight -get | cut -c -2" },
+		{ run_command,			"^c#43ffa7^  󰕾 %s",		"amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+		{ run_command,			" (%s)",						"amixer sget Master | awk -F\"[][]\" '/%/ { print $6 }'" },
+      { cpu_perc,          "^c#ff4343^  󰻠 %s%%",	NULL },
+      { ram_perc,          "^c#4388ff^   %s%%",	NULL },
+		{ ram_used,				" (%sB)",					NULL },
+      { battery_perc,      "^c#54ff48^    %s%%",	"BAT0" },
+      { datetime,          "^c#b36bf1^  %s",			"%I:%M:%S, %e.%m.%Y" },
 };
