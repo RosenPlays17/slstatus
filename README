@@ -1,4 +1,4 @@
-My build of slstatus.
+My build of slstatus
 
 Shows date and time (in german format), battery percentage, ram usage (in percent and MiB), cpu usage (in percent), volume percentage and mute status via alsa and monitor brightness via xbacklight
 Requires a nerdfont for the icons, I use CaskaydiaCove, which can be downloaded here: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/CascadiaCode.zip
