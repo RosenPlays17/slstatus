@@ -63,13 +63,13 @@ static const char unknown_str[] = "n/a";
  */
 
 static const struct arg args[] = {
-									/* function format		argument */
-		{ run_command,			"^c#ff9743^ 󰍹 %s%%",		"xbacklight -get | cut -c -2" },
-		{ run_command,			"^c#43ffa7^  󰕾 %s",		"amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-		{ run_command,			" (%s)",						"amixer sget Master | awk -F\"[][]\" '/%/ { print $6 }'" },
-      { cpu_perc,          "^c#ff4343^  󰻠 %s%%",	NULL },
-      { ram_perc,          "^c#4388ff^   %s%%",	NULL },
-		{ ram_used,				" (%sB)",					NULL },
-      { battery_perc,      "^c#54ff48^    %s%%",	"BAT0" },
-      { datetime,          "^c#b36bf1^  %s",			"%I:%M:%S, %e.%m.%Y" },
+/*	  command				function format			argument */
+	{ run_command,			"^c#ffb376^ 󰍹 %s%%",		"xbacklight -get | cut -c -2" },
+	{ run_command,			"^c#81fbb7^  󰕾 %s",		"amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+	{ run_command,			" (%s)",						"amixer sget Master | awk -F\"[][]\" '/%/ { print $6 }'" },
+	{ cpu_perc,          "^c#ff7676^  󰻠 %s%%",	NULL },
+   { ram_perc,          "^c#7c8eff^   %s%%",	NULL },
+	{ ram_used,				" (%sB)",					NULL },
+   { battery_perc,      "^c#7eff7e^    %s%%",	"BAT0" },
+   { datetime,          "^c#7a59f2^  %s ",		"%I:%M:%S, %d.%m.%Y" },
 };
